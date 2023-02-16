@@ -19,6 +19,7 @@ const Form: FC = () => {
   };
   const [user, setUser] = useState(initialUser);
   const [selectCount, setSelectCount] = useState(0);
+  const [isShowResult, setIsShowResult] = useState(false);
   const [adventureRange, setAdventureRange] = useState(2.5);
   const [selfHelpRange, setSelfHelpRange] = useState(2.5);
   const [historyRange, setHistoryRange] = useState(2.5);
@@ -42,20 +43,22 @@ const Form: FC = () => {
     const data = await res.json();
     setBook(data);
     setUser(initialUser);
-    setSelectCount(10);
+    setSelectCount(0);
+    setIsShowResult(true);
   };
-  if (selectCount === 10) {
+  if (isShowResult) {
     return (
       <Result
         amazonLink={book.amazonLink}
         title={book.title}
         author={book.author}
         src={book.src}
+        setIsShowResult={setIsShowResult}
       />
     );
   }
 
-  if (selectCount === 5) {
+  if (selectCount >= 5) {
     return (
       <Question2
         onSubmit={onSubmit}
