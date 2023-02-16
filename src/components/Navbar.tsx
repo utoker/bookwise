@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-20  rounded  mx-auto">
-      <div className="max-w-screen-xl flex flex-wrap items-center px-2 py-2.5  sm:px-4 justify-between mx-auto border border-gray-200 bg-white  dark:border-gray-700 dark:bg-gray-800">
+      <div className="max-w-screen-xl flex flex-wrap items-center px-2 py-2.5  sm:px-8 justify-between mx-auto border border-gray-200 bg-white  dark:border-gray-700 dark:bg-gray-800">
         <Link to="hero" smooth duration={500} className="flex items-center">
           <Image
             src="/images/logo.png"
@@ -134,9 +134,10 @@ const Navbar = () => {
             <li>
               <Link
                 smooth
+                spy
                 duration={500}
                 to="hero"
-                className="cursor-pointer block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                className="dark:text-gray-400 cursor-pointer block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white"
                 aria-current="page"
               >
                 Home
@@ -144,11 +145,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                spy={true}
-                smooth={true}
+                spy
+                smooth
                 duration={500}
+                offset={-400}
                 to="about"
-                className="active:text-yellow-900 cursor-pointer block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="cursor-pointer block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 About
               </Link>
@@ -156,10 +158,10 @@ const Navbar = () => {
 
             <li>
               <Link
-                spy={true}
-                smooth={true}
+                spy
+                smooth
                 duration={500}
-                to="about"
+                to="contact"
                 className="cursor-pointer block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Contact

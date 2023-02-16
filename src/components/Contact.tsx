@@ -4,7 +4,7 @@ const Contact: FC = () => {
   return (
     <section className="max-w-screen-xl mx-auto" id="contact">
       <div className="w-full p-4  bg-white border-gray-200 shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+        <h5 className="pb-2 text-4xl font-bold text-gray-900 dark:text-white">
           Contact
         </h5>
         <p className="text-gray-700 dark:text-gray-400">

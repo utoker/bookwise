@@ -4,8 +4,8 @@ const About: FC = () => {
   return (
     <section className="max-w-screen-xl mx-auto" id="about">
       <div className="w-full p-4  bg-white border-gray-200 shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          About BookWise
+        <h5 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
+          About
         </h5>
         <p className="text-lg">
           The web app I created is a user-friendly interface that allows users
