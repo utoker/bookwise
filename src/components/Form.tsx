@@ -7,6 +7,7 @@ type book = {
   title: string;
   author: string;
   src: string;
+  amazonLink: string;
 };
 
 const Form: FC = () => {
@@ -44,7 +45,14 @@ const Form: FC = () => {
     setSelectCount(10);
   };
   if (selectCount === 10) {
-    return <Result title={book.title} author={book.author} src={book.src} />;
+    return (
+      <Result
+        amazonLink={book.amazonLink}
+        title={book.title}
+        author={book.author}
+        src={book.src}
+      />
+    );
   }
 
   if (selectCount === 5) {

@@ -6,9 +6,10 @@ type FC = React.FC<{
   title: string;
   author: string;
   src: string;
+  amazonLink: string;
 }>;
 
-const Result: FC = ({ title, author, src }) => {
+const Result: FC = ({ title, author, src, amazonLink }) => {
   const { isOpen, setIsOpen } = useContext(AppContext);
 
   return (
@@ -32,12 +33,20 @@ const Result: FC = ({ title, author, src }) => {
           <h3 className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {author}
           </h3>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Go Home
-          </button>
+          <div className="w-full flex justify-between ">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Go Home
+            </button>
+            <a
+              href={amazonLink}
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Get on Amazon
+            </a>
+          </div>
         </div>
       </div>
     </section>
