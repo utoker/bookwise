@@ -48,7 +48,7 @@ const ImageCard: FC = ({ alt, src, title, setUser, setSelectCount }) => {
     <button
       onClick={onClick}
       disabled={disabled}
-      className="hover:opacity-75 transition ease-in-out duration-150 disabled:brightness-50"
+      className="hover:opacity-75 transition ease-in-out duration-150 disabled:brightness-50 disabled:opacity-50 disabled:border-2 disabled:rounded-lg disabled:border-gray-400"
     >
       <Image
         className="rounded-lg"

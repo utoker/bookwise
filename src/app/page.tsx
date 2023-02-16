@@ -1,6 +1,5 @@
 'use client';
 import Hero from '@/components/Hero';
-import CallTheAction from '@/components/CallTheAction';
 import AppContext from '@/components/AppContext';
 import { useState } from 'react';
 import BookMatch from '@/components/BookMatch';
@@ -18,7 +17,6 @@ export default function Home() {
           <Navbar />
           <BookMatch />
           <Hero />
-          <CallTheAction />
           <About />
           <Contact />
         </main>
